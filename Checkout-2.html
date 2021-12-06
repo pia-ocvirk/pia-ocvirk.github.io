@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<link rel="stylesheet" href="navigation-style.css">
+<title>Stem Player | Checkout</title>
+
+  <style>
+
+
+
+    #left {
+      width:400px;
+    }
+
+    #field-1 {
+      width: 500px;
+      height: 30px;
+    }
+
+    #field-2 {
+      width: 500px;
+      height: 30px;
+      margin-bottom: 20px;
+    }
+
+    #container-left {
+      width: 500px;
+      float: left;
+      margin-left: 200px;
+      margin-top: 100px;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    #field-3 {
+      height: 30px;
+      width: 166px;
+    }
+
+    #container-right {
+      float: right;
+      width: 550px;
+      margin-right: 130px;
+      margin-top: 100px;
+      font-family: 'Montserrat', sans-serif;
+
+    }
+
+
+    #final-text {
+      margin-top: 85px;
+      width: 350px;
+
+    }
+
+    #final-price {
+      float: right;
+    }
+
+    #field-4 {
+      width: 500px;
+      height: 24px;
+      margin-bottom: 20px;
+      background-color : lightgrey;
+      text-align: center;
+      text-size: 24px;
+      padding: 2px;
+    }
+
+    #field-4:hover {
+      background-color : grey;
+    }
+
+  </style>
+
+  <!-- header -->
+<nav role="navigation">
+  <div id="menuToggle">
+    <input type="checkbox" />
+    <span></span>
+    <span></span>
+    <span></span>
+    <ul id="menu">
+      <a href="index.html"><li>Home</li></a>
+      <a href="Donda Listening Parties.html"><li>Listen</li></a>
+      <a href="Checkout-1.html"><li>Buy Donda</li></a>
+    </ul>
+  </div>
+</nav>
+<a href="index.html"><img id="logo" src="logo.png"></a>
+<a href="Checkout-1.html"><img id="plus-navigation" src="plus.png"></a>
+
+</head>
+
+<body>
+
+
+        <div id="container-left">
+
+                  <div id="left">
+                      <h2> CONTACT INFO </h2>
+
+                      <form name="contact">
+                        <input type="text" name ="contact-line1" id="field-1"><br>
+                      </form>
+
+                      <h4> Eos qui ratione </h4>
+
+                      <p> Eos qui ratione quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora. </p>
+                  </div>
+
+                  <div id="left">
+                      <h2> SHIPPING ADDRESS</h2>
+
+
+                      <form name="address">
+
+                        <input type="text" name ="ad-line1" id="field-2"><br>
+
+                        <input type="text" name ="ad-line2" id="field-2"><br>
+
+                        <input type="text" name ="ad-line3" id="field-2"><br>
+
+                        <input type="text" name ="ad-line4" id="field-2"><br>
+
+                        <input type="text" name ="ad-line5" id="field-2"><br>
+
+                      </form>
+                  </div>
+
+          </div>
+
+
+
+          <div id="container-right">
+
+                  <div>
+                    <h2> CHECKOUT</h2>
+
+                    <img id="field-3" src="paypal.png" onclick="checkout()">
+                    <img id="field-3" src="applepay.png" onclick="checkout()">
+                    <img id="field-3" src="amazonpay.png" onclick="checkout()">
+                  </div>
+
+                  <div id="final-text">
+                    <p>Eos qui ratione quisquam est, qui </p>
+                    <p>Eos qui ratione quisquam est, qui dolorem ipsum quia dolor sit amet</p>
+                  </div>
+
+                  <hr>
+
+                  <p id="field-4" onclick="checkout()"> PURCHASE </p><br>
+
+          </div>
+
+      <script>
+
+        function checkout(){
+          var x1 = document.forms["address"]["ad-line1"].value;
+          var x2 = document.forms["address"]["ad-line2"].value;
+          var x3 = document.forms["address"]["ad-line3"].value;
+          var x4 = document.forms["address"]["ad-line4"].value;
+          var x5 = document.forms["address"]["ad-line5"].value;
+
+          if (x1 == "" || x2 == "" || x3 == "" || x4 == "" || x5 == ""){
+            var x = "";
+          }
+          else {
+            var x = x1;
+          }
+
+          var y = document.forms["contact"]["contact-line1"].value;
+
+          if (x == "" && y == "") {
+            alert("Contact and address must be filled out");
+          }
+          else if (x == "") {
+            alert("Address must be filled out");
+          }
+          else if (y == ""){
+            alert("Contact must be filled out");
+          }
+          else {
+            alert("Success.");
+          }
+        }
+
+      </script>
+
+</body>
+
+</html>

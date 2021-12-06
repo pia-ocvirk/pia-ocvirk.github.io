@@ -1,0 +1,61 @@
+body {background: white;} 
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+
+h2
+{text-align: center;
+padding :0;
+margin : 0;
+font-family: Helvetica, sans-serif;
+font-size: 20px;}
+
+h3
+{text-align: center;
+padding :0;
+margin : 0;
+font-family: 'Montserrat', sans-serif;;
+font-size: 15px;
+font-weight: lighter;
+}
+
+h4 {text-align: center;  
+	margin: 0;
+  padding:0;
+  font-family: Helvetica, sans-serif;
+font-size: 13.5px;
+	}
+
+p {text-align: center;} 
+
+	.button1 
+	{width: 270px;
+		background-color: white;
+	  border: 1px solid lightgrey;
+	font-family: Helvetica, sans-serif;
+font-size: 8px;
+font-weight: bold;
+padding: 7px 24px;}
+
+	.button2 
+	{width: 270px;
+		background-color: white;
+	 border: 1px solid lightgrey;
+	font-family: Helvetica, sans-serif;
+font-size: 8px;
+font-weight: bold;
+padding: 7px 24px;}
+
+.button1:hover
+{
+  color: gray;
+}
+
+.button2:hover
+{
+  color: gray;
+}

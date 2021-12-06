@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="navigation-style.css">
+<title>Kanye's Stem Player</title>
+
+  <style>
+    #stem-image {
+      margin-top: 250px;
+      margin-left: 150px;
+      width: 427px;
+      float: left;
+    }
+
+    #product {
+      float: right;
+      margin-top:250px;
+      margin-right:300px;
+      width: 500px;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    #number {
+      float: left;
+      margin-top: -10px;
+    }
+
+    #plus, #minus {
+      float: left;
+      padding-left: 10px;
+      margin-top: -10px;
+    }
+
+    #add-to-cart {
+      border-style: solid;
+      width: 150px;
+      height: 50px;
+      float: right;
+      margin-right:650px;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    #cart-text {
+      padding-top: 7px
+      padding-bottom: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    #cart-plus {
+      float: right;
+      margin-top: -51px;
+    }
+  </style>
+
+  <!-- header -->
+<nav role="navigation">
+  <div id="menuToggle">
+    <input type="checkbox" />
+    <span></span>
+    <span></span>
+    <span></span>
+    <ul id="menu">
+      <a href="index.html"><li>Home</li></a>
+      <a href="Donda Listening Parties.html"><li>Listen</li></a>
+      <a href="Checkout-1.html"><li>Buy Donda</li></a>
+    </ul>
+  </div>
+</nav>
+<a href="index.html"><img id="logo" src="logo.png"></a>
+<a href="Checkout-1.html"><img id="plus-navigation" src="plus.png"></a>
+</head>
+
+<body>
+
+
+<div> <img id="stem-image" src="https://cdn.vox-cdn.com/thumbor/7ki1qqKAKkElxe7bWGSRVuDdC6U=/0x16:907x564/1200x800/filters:focal(396x207:546x357)/cdn.vox-cdn.com/uploads/chorus_image/image/69774597/Screen_Shot_2021_08_25_at_8.22.59_AM.0.png" alt="Stem Player">
+</div>
+
+<div id="product">
+
+  <h2>STEM PLAYER</h2>
+  <p> Eos qui ratione quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora.
+  </p>
+
+  <h2> $200 </h2>
+
+  <h2 id="number"> 1 </h2>
+  <h2 id="plus" onclick="increase()"> + </h2>
+  <h2 id="minus" onclick="decrease()"> - </h2>
+
+  </div>
+
+<div id="add-to-cart" onclick="addToCart()">
+
+  <div id="cart-text">
+  <p>
+    ADD TO CART
+  </p>
+  <div>
+
+    <div id="cart-plus">
+  <p> + </p>
+  </div>
+
+</div>
+
+<script>
+
+  var total = 1;
+
+        function increase(){
+            total = total + 1;
+            document.getElementById("number").innerHTML = total;
+        }
+
+        function decrease(){
+            total = total - 1;
+            document.getElementById("number").innerHTML = total;
+        }
+
+        function addToCart(){
+            if (total < 1){
+                alert("Error! Please select the number of units you wish to purchase.");
+            } else {
+                alert("Successfully added to the cart!");
+                window.open("Checkout-2.html");
+            }
+        }
+
+</script> 
+
+
+</body>
+
+
+
+
+</html>
